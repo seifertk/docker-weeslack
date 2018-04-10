@@ -5,4 +5,8 @@ A dockerfile for weechat + wee-slack
 `docker build --tag weeslack .`
 
 # use
-`docker run -ti weeslack`
+`docker run --rm -ti weeslack`
+
+# persist data
+Use a volume.
+`docker run --rm -ti -v weeslack:/weechat`
