@@ -15,11 +15,10 @@ RUN apk add --no-cache \
 
 RUN adduser -S weechat -h /weechat && chown -R weechat /weechat
 
-VOLUME /weechat
+USER weechat
 
-ADD https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py /weechat/python/autoload/wee_slack.py
+ADD --chown=weechat:root https://raw.githubusercontent.com/rawdigits/wee-slack/master/wee_slack.py /weechat/python/autoload/wee_slack.py
 
 WORKDIR /weechat
-USER weechat
 
 CMD [ "weechat" ]

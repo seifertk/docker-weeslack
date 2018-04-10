@@ -9,4 +9,4 @@ A dockerfile for weechat + wee-slack
 
 # persist data
 Use a volume.
-`docker run --rm -ti -v weeslack:/weechat`
+`docker run --rm -ti -v weeslack:/weechat weeslack`
