@@ -2,6 +2,7 @@ FROM alpine:latest
 LABEL Author="Kyle Seifert <seifert.kyle@gmail.com>"
 
 ENV LANG C.UTF-8
+ENV TZ America/Toronto
 ENV WEECHAT_HOME /weechat
 
 RUN apk add --no-cache \
